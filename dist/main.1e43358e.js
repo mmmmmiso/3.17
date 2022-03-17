@@ -118,7 +118,38 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"src/main.js":[function(require,module,exports) {
-console.log('welcome');
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var Book = /*#__PURE__*/function () {
+  // constructor:function(){}의 약자
+  function Book(type, title) {
+    _classCallCheck(this, Book);
+
+    this.type = type;
+    this.title = title;
+  } // list:function(){}의 약자
+
+
+  _createClass(Book, [{
+    key: "list",
+    value: function list() {
+      document.write("\n      <p>\n      ".concat(this.type, " : ").concat(this.title, "\n      </p>\n      "));
+    }
+  }]);
+
+  return Book;
+}();
+
+var photo = new Book('graphic', 'photoshop');
+var vetor = new Book('graphic', 'illustrator');
+var code = new Book('it', 'html');
+photo.list();
+vetor.list();
+code.list();
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -147,7 +178,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1659" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "3913" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
