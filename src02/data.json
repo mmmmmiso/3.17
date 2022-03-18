@@ -1,0 +1,11 @@
+{
+  "string" : "javascript",
+  "num" : 123,
+  "boolean" : true,
+  "null" : null,
+  "obj" : {
+    "a" : "123",
+    "b" : "str"
+  },
+  "array" : [1,2,3,4]
+}
